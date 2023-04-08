@@ -7,15 +7,12 @@
  
 </head>
 
-
 <div class="content">
   
   <h1 class="header center orange-text">Employee Attrition Prediction</h1>
   
   <div class="form">
     <form action="/predict" method="POST">
-      
-      <br><br>
 
       <label for="predict">Age</label>
       <input type="number" name="Age" id="Age">
@@ -28,56 +25,67 @@
       <br><br>
 
       <label for="predict">Environment Satisfaction</label>
-      <input type = "number" name="EnvironmentSatisfaction" id="EnvironmentSatisfaction">
+      <select id="EnvironmentSatisfaction" name="EnvironmentSatisfaction">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      <option value="4">5</option>
+      </select>
 
       <br><br>
 
       <label for="predict">Job Involvement</label>
-      <input type = "number" name="JobInvolvement" id="JobInvolvement">
+      <select id="JobInvolvement" name="JobInvolvement">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      </select>
 
       <br><br>
 
       <label for="predict">Select job level</label>
       <select id="JobLevel" name="JobLevel">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2">3</option>
+      <option value="3">4</option>
+      <option value="4">5</option>
       </select>
 
       <br><br>
 
       <label for="predict">Select job role</label>
-      <select id="JobLevel" name="JobLevel">
-      <option value="1">Sales Executive</option>
-      <option value="2">Research Scientist</option>
-      <option value="3">Laboratory Technician</option>
+      <select id="JobRole" name="JobRole">
+      <option value="0">Healthcare Representative</option>
+      <option value="1">Human Resource</option>
+      <option value="2">Laboratory Technician</option>
+      <option value="3">Manager</option>
       <option value="4">Manufacturing Director</option>
-      <option value="5">Healthcare Representative</option>
-      <option value="6">Manager</option>
-      <option value="7">Sales Representative</option>
-      <option value="8">Research Director</option>
-      <option value="9">Human Resources</option>
+      <option value="5">Research Director</option>
+      <option value="6">Research Scientist</option>
+      <option value="7">Sales Executive</option>
+      <option value="8">Sales Representative</option>
       </select>
 
       <br><br>
 
       <label for="predict">Job Satisfaction</label>
       <select id="JobSatisfaction" name="JobSatisfaction">
-      <option value="1">Low</option>
-      <option value="2">Medium</option>
-      <option value="3">High</option>
-      <option value="4">Very High</option>
+      <option value="0">Low</option>
+      <option value="1">Medium</option>
+      <option value="2">High</option>
+      <option value="3">Very High</option>
       </select>
 
       <br><br>
 
       <label for="predict">Marital Status</label>
       <select id="MaritalStatus" name="MaritalStatus">
-      <option value="1">Single</option>
-      <option value="2">Married</option>
-      <option value="3">Divorced</option>
+      <option value="0">Divorced</option>
+      <option value="1">Married</option>
+      <option value="2">Single</option>
       </select>
 
       <br><br>
@@ -130,105 +138,4 @@
     </form>  
   </div>
 </div>
-
-
-<!-- 
-<body>
-
-    <div class="container">
-      <form action="{{ url_for('predict')}}" method="post"></form>
-      <h1 class="header center orange-text">  Employee Attrition Prediction </h1>
-      
-      <h2 class="header center orange-text"> Set 2 </h2>
-
-      <br>
-      <label for="userInput" style="margin-left: 500px;"><b>Age</b></label>
-      <input type="text" id="userInput" name="Age">
-      <br>
-
-      <br>
-      <label for="userInput"><b>Distance_from_home</b></label>
-      <input type="text" id="userInput" name="Distance_from_home">
-      <br>
-      <br>
-      <label for="userInput" style="margin-left: 500px;"><b>EnvironmentSatisfaction</b></label>
-      <input type="text" id="EnvironmentSatisfaction" name="userInput">
-      <br>
-     <br>
-
-     <label for="userInput"  style="margin-left: 500px" ><b>JobInvolvement</b></label>
-      <input type="text" id="userInput" name="JobInvolvement">
-           <br>
-           <br>
-           <label for="userInput"><b>Joblevel</b></label>
-           <input type="text" id="userInput" name="Joblevel">
-           
-           <br>
-         
-         <label for="userInput" style="margin-left: 500px;"><b>Jobrole</b></label>
-         <input type="text" id="userInput" name="Jobrole">
- 
-         <br>
-         <label for="userInput"><b>Jobsatisfaction</b></label>
-          <input type="text" id="userInput" name="Jobsatisfaction">
-            <br>
-            <label for="userInput"><b>MaritalStatus</b></label>
-            <input type="text" id="userInput" name="MaritalStatus">
-           
-           
-            
-                <br>
-              <label for="userInput"><b>MonthlyIncome</b></label>
-              <input type="text" id="userInput" name="MonthlyIncome">
-              <br>
- 
-          
-              <br>
-              <label for="userInput"><b>Overtime</b></label>
-              <input type="text" id="userInput" name="Overtime">
-              <br>
-      
-              <label for="userInput" style="margin-left: 500px;"><b>StockOptionLevel</b></label>
-              <input type="text" id="StockOptionLevel" name="userInput">
-               <br>
-            <label for="last_name"  ><b>YearsWithCurrManager </b></label>
-            
-          <input id="last_name"  name="YearsWithCurrManager" type="text" class="validate">
-          <br>
-          
-     
-          <label for="userInput" style="margin-left: 500px;"><b>YearsAtCompany</b></label>
-          <input type="text" id="YearsAtCompany" name="userInput">
-          <br>
-            <label for="last_name"  ><b>YearsInCurrentRole	 </b></label>
-            
-          <input id="last_name"  name="YearsInCurrentRole	" type="text" class="validate">
-          <br>
-       
-          <br>
-          <label for="userInput"><b>TotalWorkingYears	</b></label>
-          <input type="text" id="userInput" name="TotalWorkingYears	">
-          <br>
-            
-
-
-     
-
-      
-        <br>
-          <button type="submit" >Predict Probability</button>
-   
-
-      </div>
-
-    
-
-   -->
-
-
-  <!-- </body> -->
 </html>
-
-
-
-
